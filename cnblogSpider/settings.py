@@ -20,6 +20,25 @@ NEWSPIDER_MODULE = 'cnblogSpider.spiders'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
+FEED_EXPORT_ENCODING = 'utf-8'
+ITEM_PIPELINES = {
+    'cnblogSpider.pipelines.CnblogspiderPipeline':300
+}
+
+#FILES_STORE = 'E:\\tuotuo\\data\\cnblogs'
+#FILES_URLS_FIELD = 'file_urls'
+#FILES_RESULT_FIELD = 'files'
+#FILES_EXPIRES = 30 # 30天过期
+
+#IMAGES_STORE = 'E:\\tuotuo\\data\\cnblogs'
+#IMAGES_URLS_FIELD = 'image_url'
+#IMAGES_RESULT_FIELD = 'images'
+#IMAGES_EXPIRES = 30 # 30天过期
+# 制图缩略
+#IMAGES_THUMBS = {
+#    'small':(50,70),
+#    'big':(270,270),
+#}
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
